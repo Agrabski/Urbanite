@@ -41,3 +41,7 @@ services.AddUrbaniteSwaggerDocumentationPolymorphism();
 ```
 It will configure swagger to use `PolymorphicTypeResolver` to describe polymorphic types (selecting derived types and type discriminators). 
 And set polymorphic type handling to use All of for inheritance.
+
+## Packages
+Urbanite [![NuGet version (Urbanite)](https://img.shields.io/nuget/v/Urbanite.svg?style=flat-square)](https://www.nuget.org/packages/Urbanite/)
+Urbanite.Extensions.Swagger [![NuGet version (Urbanite.Extensions.Swagger)](https://img.shields.io/nuget/v/Urbanite.Extensions.Swagger.svg?style=flat-square)](https://www.nuget.org/packages/Urbanite.Extensions.Swagger/)
