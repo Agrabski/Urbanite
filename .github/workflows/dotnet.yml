@@ -25,6 +25,6 @@ jobs:
     - name: Test
       run: dotnet test --no-build --verbosity normal
     - name: Publish Nuget to GitHub registry
-      run: dotnet nuget push **/*.nupkg -k ${TOKEN} --skip-duplicate
+      run: dotnet nuget push **/*.nupkg -k ${TOKEN} --skip-duplicate -s https://api.nuget.org/v3/index.json
       env:
         TOKEN: ${{ secrets.NUGET_TOKEN }}
