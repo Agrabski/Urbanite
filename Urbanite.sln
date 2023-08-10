@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.33808.371
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Urbanite", "Urbanite\Urbanite.csproj", "{6F30C26D-0E2A-42F5-A87C-72742C385CED}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Urbanite.Extensions.Swagger", "Urbanite.Extensions.Swagger\Urbanite.Extensions.Swagger.csproj", "{77B737BA-26A4-4D47-B92B-C0190C43E71F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution items", "Solution items", "{5F50BE1F-5B0D-4F37-A7D0-D06C4E927449}"
+	ProjectSection(SolutionItems) = preProject
+		Directory.Build.props = Directory.Build.props
+		LICENSE.txt = LICENSE.txt
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6F30C26D-0E2A-42F5-A87C-72742C385CED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F30C26D-0E2A-42F5-A87C-72742C385CED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6F30C26D-0E2A-42F5-A87C-72742C385CED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6F30C26D-0E2A-42F5-A87C-72742C385CED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{77B737BA-26A4-4D47-B92B-C0190C43E71F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{77B737BA-26A4-4D47-B92B-C0190C43E71F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{77B737BA-26A4-4D47-B92B-C0190C43E71F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{77B737BA-26A4-4D47-B92B-C0190C43E71F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {36873D94-C903-4652-932B-016A7AE010B9}
+	EndGlobalSection
+EndGlobal
