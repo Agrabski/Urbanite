@@ -8,5 +8,8 @@ public static class DIExtension
 		.AddSingleton<IPolymorphicTypeResolver, PolymorphicTypeResolver>()
 		.AddSingleton<IJsonTypeInfoResolver, PolymorphicTypeResolver>();
 	public static IServiceCollection AddUrbaniteSerializableType<TBase, TImpl>(this IServiceCollection collection, string? discriminator = null) where TImpl : TBase => collection
-		.AddSingleton<IPolymorphicTypeInfo>(_ => PolymorphicTypeInfo<TBase>.FromImplementation<TImpl>(discriminator));
+		.AddSingleton<IPolymorphicTypeInfo>(_ => PolymorphicTypeInfo.FromImplementation<TBase, TImpl>(discriminator));
+
+	public static IServiceCollection AddUrbaniteSerializableType(this IServiceCollection collection, Type baseType, Type derived, string? discriminator = null) => collection
+		.AddSingleton<IPolymorphicTypeInfo>(_ => new PolymorphicTypeInfo(baseType, derived, discriminator));
 }

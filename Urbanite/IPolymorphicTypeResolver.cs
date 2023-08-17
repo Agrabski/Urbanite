@@ -1,8 +1,6 @@
-﻿using System.Text.Json;
-using System.Text.Json.Serialization.Metadata;
+﻿using System.Text.Json.Serialization.Metadata;
 
 namespace Urbanite;
-public interface IPolymorphicTypeResolver
+public interface IPolymorphicTypeResolver : IJsonTypeInfoResolver
 {
-	JsonTypeInfo GetTypeInfo(Type type, JsonSerializerOptions options);
 }
