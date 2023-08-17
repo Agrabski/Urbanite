@@ -20,7 +20,7 @@ public class SwaggerOptionsConfiguration : IConfigureOptions<SwaggerGenOptions>
 		s.SelectSubTypesUsing(baseType =>
 		{
 			var info = _infoResolver.GetTypeInfo(baseType, new());
-			if (info.PolymorphismOptions is not null)
+			if (info?.PolymorphismOptions is not null)
 			{
 				foreach (var derivedType in info.PolymorphismOptions.DerivedTypes)
 					typeDiscriminators[derivedType.DerivedType] = derivedType.TypeDiscriminator?.ToString() ?? throw new InvalidOperationException($"Type dyscriminator for {derivedType} was null");
@@ -31,16 +31,13 @@ public class SwaggerOptionsConfiguration : IConfigureOptions<SwaggerGenOptions>
 		s.SelectDiscriminatorNameUsing(baseType =>
 		{
 			var info = _infoResolver.GetTypeInfo(baseType, new());
-			if (info.PolymorphismOptions is not null)
-				return info.PolymorphismOptions.TypeDiscriminatorPropertyName;
-			return string.Empty;
-
+			return info?.PolymorphismOptions is not null ? info.PolymorphismOptions.TypeDiscriminatorPropertyName : string.Empty;
 		});
 		s.SelectDiscriminatorValueUsing(type =>
 		{
-			if (typeDiscriminators.ContainsKey(type))
-				return typeDiscriminators[type];
-			throw new InvalidOperationException($"Unrecognised type: {type}");
+			return typeDiscriminators.ContainsKey(type)
+				? typeDiscriminators[type]
+				: throw new InvalidOperationException($"Unrecognised type: {type}");
 		});
 	}
 }
