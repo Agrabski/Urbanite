@@ -34,6 +34,12 @@ class JsonOptionsConfiguration : IConfigureOptions<JsonOptions>
 }
 
 ```
+
+To change type discriminator property name, use the `JsonPolymorphic` attirbute
+```
+[JsonPolymorphic(TypeDiscriminatorPropertyName = "$my_discriminator")]
+interface IBase{}
+```
 ## Swagger
 To make swagger work with polymorphic types, use `Urbanite.Extensions.Swagger`:
 ```

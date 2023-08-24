@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.33808.371
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Urbanite", "Urbanite\Urbanite.csproj", "{6F30C26D-0E2A-42F5-A87C-72742C385CED}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Urbanite", "Urbanite\Urbanite.csproj", "{6F30C26D-0E2A-42F5-A87C-72742C385CED}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Urbanite.Extensions.Swagger", "Urbanite.Extensions.Swagger\Urbanite.Extensions.Swagger.csproj", "{77B737BA-26A4-4D47-B92B-C0190C43E71F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Urbanite.Extensions.Swagger", "Urbanite.Extensions.Swagger\Urbanite.Extensions.Swagger.csproj", "{77B737BA-26A4-4D47-B92B-C0190C43E71F}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution items", "Solution items", "{5F50BE1F-5B0D-4F37-A7D0-D06C4E927449}"
 	ProjectSection(SolutionItems) = preProject
@@ -14,6 +14,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution items", "Solution 
 		LICENSE.txt = LICENSE.txt
 		README.md = README.md
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Urbanite.Tests", "Urbanite.Tests\Urbanite.Tests.csproj", "{D46C5C62-A87E-4C60-9D39-237A96AF91C3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,6 +31,10 @@ Global
 		{77B737BA-26A4-4D47-B92B-C0190C43E71F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{77B737BA-26A4-4D47-B92B-C0190C43E71F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{77B737BA-26A4-4D47-B92B-C0190C43E71F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D46C5C62-A87E-4C60-9D39-237A96AF91C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D46C5C62-A87E-4C60-9D39-237A96AF91C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D46C5C62-A87E-4C60-9D39-237A96AF91C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D46C5C62-A87E-4C60-9D39-237A96AF91C3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
