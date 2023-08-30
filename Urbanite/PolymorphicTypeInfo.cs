@@ -1,6 +1,7 @@
 ﻿using System.Text.Json.Serialization.Metadata;
 
 namespace Urbanite;
+
 public class PolymorphicTypeInfo : IPolymorphicTypeInfo
 {
 	private JsonDerivedType? _typeInfo;
@@ -18,7 +19,7 @@ public class PolymorphicTypeInfo : IPolymorphicTypeInfo
 
 	public JsonDerivedType TypeInfo => _typeInfo ??= GenerateTypeInfo();
 
-    private JsonDerivedType GenerateTypeInfo() => new(Derived, _discriminator ?? Derived.FullName ?? Derived.Name);
+	private JsonDerivedType GenerateTypeInfo() => new(Derived, _discriminator ?? Derived.FullName ?? Derived.Name);
 
 	public static PolymorphicTypeInfo
 		FromImplementation<TBaseType, TDerived>(string? discriminator = null)

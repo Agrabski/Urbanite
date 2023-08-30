@@ -23,7 +23,7 @@ public class SwaggerOptionsConfiguration : IConfigureOptions<SwaggerGenOptions>
 			if (info?.PolymorphismOptions is not null)
 			{
 				foreach (var derivedType in info.PolymorphismOptions.DerivedTypes)
-					typeDiscriminators[derivedType.DerivedType] = derivedType.TypeDiscriminator?.ToString() ?? throw new InvalidOperationException($"Type dyscriminator for {derivedType} was null");
+					typeDiscriminators[derivedType.DerivedType] = derivedType.TypeDiscriminator?.ToString() ?? throw new InvalidOperationException($"Type discriminator for {derivedType.DerivedType} was null");
 				return info.PolymorphismOptions.DerivedTypes.Select(d => d.DerivedType);
 			}
 			return Enumerable.Empty<Type>();
@@ -37,7 +37,7 @@ public class SwaggerOptionsConfiguration : IConfigureOptions<SwaggerGenOptions>
 		{
 			return typeDiscriminators.ContainsKey(type)
 				? typeDiscriminators[type]
-				: throw new InvalidOperationException($"Unrecognised type: {type}");
+				: throw new InvalidOperationException($"Unrecognized type: {type}");
 		});
 	}
 }
