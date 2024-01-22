@@ -16,6 +16,7 @@ public class SwaggerOptionsConfiguration : IConfigureOptions<SwaggerGenOptions>
 	{
 		var typeDiscriminators = new Dictionary<Type, string>();
 		s.SupportNonNullableReferenceTypes();
+		s.SchemaFilter<RequiredNotNullableSchemaFilter>();
 		s.UseAllOfForInheritance();
 		s.SelectSubTypesUsing(baseType =>
 		{
